@@ -1,9 +1,49 @@
 @import "~novo-elements/styles/global/variables";
+@import '../../mixins.scss';
 
 .frame {
   display: flex;
-  flex-direction: row;
-  margin-top: 76px;
+  flex-flow: column;
+
+  @include tablet() {
+    margin-top: 133px;
+  }
+
+  .hero-container {
+    margin-top: 35.2px;
+    display: flex;
+    width: 100%;
+    background: #413c35;
+    height: 300px;
+    position: relative;
+
+    .hero-content {
+      display: flex;
+      width: 100%;
+
+      .hero-image {
+        background: url(../../assets/images/TPD-job-board.jpeg);
+        opacity: 0.6;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: repeat;
+        width: 100%;
+
+      }
+      .hero-text {
+        color: #fff;
+        font-size: 47.6px;
+        line-height: 65.45px;
+        font-family: Roboto;
+        font-weight: 700;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        padding: 150px 20px 150px 20px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.41);
+      }
+    }
+  }
 
   app-sidebar {
     width: 30%;
