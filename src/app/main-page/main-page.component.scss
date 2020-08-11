@@ -3,11 +3,12 @@
 .frame {
   display: flex;
   flex-direction: row;
+  margin-top: 76px;
 
   app-sidebar {
     width: 30%;
     flex-grow: 0;
-    height: calc(100vh - 55px);
+    height: 100%;
     max-width: 300px;
     min-width: 250px;
     overflow-x: hidden;
@@ -18,7 +19,7 @@
     width: 80%;
     flex-grow: 1000;
     overflow-y: auto;
-    height: calc(100vh - 55px);
+    height: 100%
   }
 
   @media only screen and (min-width: 768px) {

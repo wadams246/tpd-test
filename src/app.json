@@ -9,7 +9,7 @@
     "rtf",
     "odt"
   ],
-  "companyName": "[ COMPANY NAME HERE ]",
+  "companyName": "TPD",
   "companyLogoPath": "",
   "companyUrl": "",
   "careersUrl": "",
@@ -24,7 +24,7 @@
   "maxUploadSize": 5242880,
   "service": {
     "batchSize": 500,
-    "corpToken": "1VCNF4",
+    "corpToken": "3N0DS4",
     "port": null,
     "swimlane": "91",
     "fields": [

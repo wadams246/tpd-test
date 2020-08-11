@@ -1,0 +1,275 @@
+@import '../../index.scss';
+
+.header {
+  display: flex;
+  width: 100%;
+  background: $background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  * {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-family: 16px;
+    color: $link-color;
+  }
+
+  .header-content {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: $nav-justification;
+    width: 970px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+
+    @include large-desktop() {
+      width: 1170px;
+    }
+
+    .logo-container {
+      a {
+        padding: 7px 15px;
+        display: inline-block;
+        line-height: 60px;
+        height: 76px;
+        font-size: 18px;
+
+        @include tablet() {
+          margin-left: -15px;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      width: 100%;
+      position: relative;
+
+      @include tablet() {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+        padding: 9px 10px;
+        font-size: 9px;
+        line-height: 14px;
+        background-color: $primary-color;
+        border-radius: 4px;
+        margin: 23px 15px 8px 0;
+
+        @include tablet() {
+          display: none;
+        }
+
+        .lines {
+          display: inline-block;
+          width: 22px;
+          height: 2px;
+          -webkit-border-radius: 1px;
+          -webkit-background-clip: padding-box;
+          -moz-border-radius: 1px;
+          -moz-background-clip: padding;
+          border-radius: 1px;
+          background-clip: padding-box;
+          background: #fff;
+          position: relative;
+          top: -2px;
+
+          &:before, &:after {
+            display: inline-block;
+            width: 22px;
+            height: 2px;
+            -webkit-border-radius: 1px;
+            -webkit-background-clip: padding-box;
+            -moz-border-radius: 1px;
+            -moz-background-clip: padding;
+            border-radius: 1px;
+            background-clip: padding-box;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            content: '';
+            transform-origin: 50% 50%;
+          }
+
+          &:before {
+            top: 6px;
+          }
+          &:after {
+            top: -6px;
+          }
+        }
+      }
+    }
+
+    .nav-container {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      background: #fff;
+      width: 100%;
+      padding: 0 30px;
+      margin-left: -15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .7s ease-in-out;
+
+      &.open {
+        max-height: 100vh;
+      }
+
+      @include tablet() {
+        max-height: unset !important;
+        position: unset;
+        width: unset;
+        padding: 0;
+        overflow: unset !important;
+      }
+
+      .nav-content {
+        width: 100%;
+
+        @include tablet() {
+          width: unset;
+        }
+
+        ul.links {
+          list-style: none;
+          display: flex;
+          flex-flow: column;
+          margin: 0;
+          padding: 0;
+
+          @include tablet() {
+            flex-flow: row;
+          }
+
+          .dropdown-button {
+            display: block;
+            position: absolute;
+            z-index: 9;
+            right: 0;
+            top: 5px;
+            color: #fff;
+            width: 25px;
+            height: 25px;
+            margin: 0;
+            padding: 0;
+            border-radius: 3px;
+            border: none;
+            background: url(../../assets/images/menu-icon.png) center center no-repeat #e96656;
+
+            &:focus {
+              background-color: #D44141;
+              outline: none;
+            }
+
+            @include tablet() {
+              display: none;
+            }
+          }
+
+          > li {
+            position: relative;
+            margin: 8px 0 0 0;
+            padding: 0 0 8px 0;
+
+            &:not(:last-of-type) {
+              border-bottom: 1px solid #ededed;
+            }
+
+            @include tablet() {
+              margin: 0;
+              padding: 0;
+              border-bottom: none !important;
+
+              &:last-of-type a {
+                margin: 20px 0 0 0;
+              }
+
+            }
+
+            &:hover > a {
+              color: $primary-color;
+            }
+
+
+            > a {
+              display: flex;
+              text-decoration: none;
+              line-height: 35px;
+              transition: color 700ms ease;
+              font-size: 16px;
+              white-space: nowrap;
+
+              @include tablet() {
+                margin: 20px 20px 0 0;
+              }
+            }
+
+            &:hover ul.child-links {
+              visibility: visible !important;
+              opacity: 1 !important;
+            }
+
+            ul.child-links {
+              background: $background-color;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              width: 100%;
+              transition: height 0.4s;
+              height: 0;
+              overflow: hidden;
+
+              @include tablet() {
+                opacity: 0;
+                visibility: hidden;
+                width: 200px;
+                height: unset !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                box-shadow: 3px 3px 2px rgba(50, 50, 50, 0.08);
+              }
+
+              li {
+                &:not(:last-of-type) {
+                  border-bottom: 1px solid #ededed;
+                }
+
+                @include tablet() {
+                  border-bottom: none !important;
+                }
+
+                a {
+                  text-decoration: none;
+                  display: flex;
+                  justify-content: left;
+                  padding: 10px;
+                  transition: color 700ms ease;
+                  font-size: 16px;
+
+                  &:hover {
+                    color: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

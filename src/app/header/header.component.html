@@ -1,0 +1,115 @@
+<div id="header" class="header">
+  <div class="header-content">
+
+    <div class="logo-container">
+      <a href="https://tpd.com/">
+        <img src="../../assets/images/TPD-PPP-RGB-Logo-150px-3.png" alt="TPD-PPP-RGB-Logo-150px-3.png">
+      </a>
+    </div>
+
+    <!-- mobile nav button -->
+    <div class="icon-container">
+      <div class="mobile-menu-toggle" (click)="toggleMobileNav()">
+        <span class="lines"></span>
+      </div>
+    </div>
+
+    <div class="nav-container" [ngClass]="{ 'open': isMobileNavOpen }">
+      <div class="nav-content">
+        <ul class="links">
+          <li>
+          <a href="http://www.google.com">Solutions</a>
+          <button class="dropdown-button" (click)="toggleSubMenu('solutions')"></button>
+          <ul class="child-links" [ngStyle]="{ 'height': currentOpenSubmenu === 'solutions' ? '199px' : 0 }">
+            <li>
+              <a href="https://tpd.com/human-resource-solutions/">HR Solutions</a>
+            </li>
+            <li>
+              <a href="https://tpd.com/staffing-services/">Staffing Services</a>
+            </li>
+            <li>
+              <a href="https://tpd.com/recruiting-services/">Recruiting Services</a>
+            </li>
+            <li>
+              <a href="https://info.tpd.com/insourced-talent-acquisition-solutions">Insourced Talent Acquisition Solutions</a>
+            </li>
+            <li>
+              <a href="http://info.tpd.com/hr-technology">HR Technology</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://tpd.com/job-opportunities/">Job Opportunities</a>
+          <button class="dropdown-button" (click)="toggleSubMenu('jobOpportunities')"></button>
+          <ul class="child-links" [ngStyle]="{ 'height': currentOpenSubmenu === 'jobOpportunities' ? '79px' : 0 }">
+            <li>
+              <a href="https://tpd.com/working-with-tpd/">Working With TPD</a>
+            </li>
+            <li>
+              <a href="https://tpd.com/candidate-tools/">Candidate Tools</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://tpd.com/hr-tools/">HR Tools</a>
+          <button class="dropdown-button" (click)="toggleSubMenu('hrTools')"></button>
+          <ul class="child-links" [ngStyle]="{ 'height': currentOpenSubmenu === 'hrTools' ? '159px' : 0 }">
+            <li>
+              <a href="https://info.tpd.com/online-training">Online Training</a>
+            </li>
+            <li>
+              <a href="https://tpd.com/ebooks/">eBooks</a>
+            </li>
+            <li>
+              <a href="https://info.tpd.com/company-culture-quiz">Culture Quiz</a>
+            </li>
+            <li>
+              <a href="https://info.tpd.com/covid-19-support">COVID-19 HR Support</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://blog.tpd.com/">Blog</a>
+        </li>
+        <li>
+          <a href="https://tpd.com/about-tpd/">About TPD</a>
+          <button class="dropdown-button" (click)="toggleSubMenu('aboutTPD')"></button>
+          <ul class="child-links" [ngStyle]="{ 'height': currentOpenSubmenu === 'aboutTPD' ? '239px' : 0 }">
+            <li>
+              <a href="https://tpd.com/about-tpd/">Our Story</a>
+            </li>
+            <li>
+              <a href="http://tpd.com/#aboutus">Our Partners</a>
+            </li>
+            <li>
+              <a href="http://tpd.com/#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="https://info.tpd.com/customer-case-study">Case Studies</a>
+            </li>
+            <li>
+              <a href="https://tpd.com/press/">Press</a>
+            </li>
+            <li>
+              <a href="https://tpd.com/careers/">Careers At TPD</a>
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <a href="http://info.tpd.com/contact-tpd">Contact TPD</a>
+          <button class="dropdown-button" (click)="toggleSubMenu('contactTPD')"></button>
+          <ul class="child-links" [ngStyle]="{ 'height': currentOpenSubmenu === 'contactTPD' ? '39px' : 0 }">
+            <li>
+              <a href="http://tpd.com/submit-feedback/">Submit Feedback</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://info.tpd.com/tpd-client-tools">Login</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
