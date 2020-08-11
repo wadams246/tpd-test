@@ -32,7 +32,6 @@
       "title",
       "publishedCategory(id,name)",
       "address(city,state,countryName)",
-      "employmentType",
       "dateLastPublished",
       "publicDescription",
       "isOpen",
@@ -43,7 +42,6 @@
       "salaryUnit"
     ],
     "jobInfoChips": [
-      "employmentType",
       {
         "type": "mediumDate",
         "field": "dateLastPublished"

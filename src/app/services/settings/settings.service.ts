@@ -40,7 +40,6 @@ export class SettingsService {
         'title',
         'publishedCategory(id,name)',
         'address(city,state,countryName)',
-        'employmentType',
         'dateLastPublished',
         'publicDescription',
         'isOpen',
@@ -54,7 +53,6 @@ export class SettingsService {
 
     if (!SettingsService.settings.service.jobInfoChips) {
       SettingsService.settings.service.jobInfoChips = [
-        'employmentType',
         {
           type: 'mediumDate',
           field: 'dateLastPublished',
