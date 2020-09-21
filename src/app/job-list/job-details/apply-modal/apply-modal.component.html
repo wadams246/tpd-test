@@ -27,7 +27,9 @@
               <novo-control [form]="form" [control]="control"></novo-control>
             </div>
           </div>
-          <label class="consent-checkbox-label">{{ 'BY_CHECKING_THIS_BOX' | translate}} <a (click)="viewPrivacyPolicy()">{{ 'TPD_PRIVACY_POLICY' | translate}}</a></label>
+          <div class="consent-checkbox-label-container">
+            <label class="consent-checkbox-label">{{ 'BY_CHECKING_THIS_BOX' | translate}} <a (click)="viewPrivacyPolicy()">{{ 'TPD_PRIVACY_POLICY' | translate}}</a></label>
+          </div>
       </novo-form>
       <span *ngIf="hasError" class="error">{{ 'ERROR_WHILE_APPLYING' | translate}}</span>
     </section>

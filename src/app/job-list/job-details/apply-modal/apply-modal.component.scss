@@ -26,6 +26,13 @@
     font-weight: 400;
   }
 
+  .consent-checkbox-label-container {
+    margin-top: 10px;
+    .consent-checkbox-label {
+      font-weight: 600;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
