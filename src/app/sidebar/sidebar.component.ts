@@ -68,12 +68,7 @@ export class SidebarComponent {
   }
 
   public viewPrivacyPolicy(): void {
-    const url: string = SettingsService.settings.privacyConsent.privacyPolicyUrl;
-    if (url === '/privacy') {
-      this.router.navigate([url]);
-    } else {
-      window.open(url);
-    }
+    window.open('https://tpd.com/privacy-policy/');
   }
 
   private handleJobIdsOnSuccess(res: any): void {

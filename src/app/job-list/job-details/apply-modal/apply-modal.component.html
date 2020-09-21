@@ -16,14 +16,20 @@
             <novo-control [form]="form" [control]="control"></novo-control>
           </div>
           <div class="eeoc-form" *ngIf="eeocControls.length">
-            <novo-fieldset-header title="{{ 'EEOC.EEOC_FORM_DESCRIPTION' | translate }}"></novo-fieldset-header>
+            <novo-fieldset-header title="{{ 'EEOC.EEOC_FORM_DESCRIPTION' | translate }}">
+            </novo-fieldset-header>
+
+            <div class="tpd-eeoc-description">
+              <span>{{ 'EEOC.TPD_EEOC_DESCRIPTION' | translate }}</span>
+            </div>
+
             <div *ngFor="let control of eeocControls" class="novo-form-row">
               <novo-control [form]="form" [control]="control"></novo-control>
             </div>
           </div>
           <div *ngIf="consentCheckbox" class="consent-form novo-form-row">
             <novo-control [form]="form" [control]="consentControl"></novo-control>
-            <label class="consent-checkbox-label">{{ 'BY_CHECKING_THIS_BOX' | translate}} <a (click)="viewPrivacyPolicy()">{{ 'PRIVACY_POLICY' | translate}}</a></label>
+            <label class="consent-checkbox-label">{{ 'BY_CHECKING_THIS_BOX' | translate}} <a (click)="viewPrivacyPolicy()">{{ 'TPD_PRIVACY_POLICY' | translate}}</a></label>
           </div>
       </novo-form>
       <span *ngIf="hasError" class="error">{{ 'ERROR_WHILE_APPLYING' | translate}}</span>

@@ -116,7 +116,9 @@ export class ApplyModalComponent implements OnInit {
             { value: 'AS', label: TranslateService.translate('EEOC.RACE_ETHNICITY_AS') },
             { value: 'NP', label: TranslateService.translate('EEOC.RACE_ETHNICITY_NP') },
             { value: 'IA', label: TranslateService.translate('EEOC.RACE_ETHNICITY_IA') },
-            { value: 'DN', label: TranslateService.translate('EEOC.RACE_ETHNICITY_DN') },
+            { value: 'IP', label: TranslateService.translate('EEOC.RACE_ETHNICITY_IP') },
+            { value: 'MR', label: TranslateService.translate('EEOC.RACE_ETHNICITY_MR') },
+            { value: 'DN', label: TranslateService.translate('EEOC.RACE_ETHNICITY_DN') }
           ],
         },
       }),
@@ -152,6 +154,7 @@ export class ApplyModalComponent implements OnInit {
     ];
     this.resume = new FileControl({
       key: 'resume',
+      label: TranslateService.translate('RESUME'),
       required: true,
       hidden: false,
       description: `${TranslateService.translate('ACCEPTED_RESUME')} ${SettingsService.settings.acceptedResumeTypes.toString()}`,
@@ -230,12 +233,8 @@ export class ApplyModalComponent implements OnInit {
   }
 
   public viewPrivacyPolicy(): void {
-    const url: string = SettingsService.settings.privacyConsent.privacyPolicyUrl;
-    if (url === '/privacy') {
-      this.router.navigate([url]);
-    } else {
-      window.open(url);
-    }  }
+    window.open('https://tpd.com/privacy-policy/');
+  }
 
   private applyOnSuccess(res: any): void {
     let toastOptions: any = {

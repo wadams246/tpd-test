@@ -372,3 +372,14 @@ novo-toast.success {
 novo-modal-container {
   overflow: auto;
 }
+
+.file-output-group {
+  margin-top: 0 !important;
+}
+
+.file {
+  .required-indicator {
+    position: relative !important;
+    top: -51px !important;
+  }
+}
