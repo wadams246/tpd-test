@@ -1,5 +1,5 @@
 @import "~novo-elements/styles/global/variables";
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
 .frame {
   display: flex;
@@ -17,6 +17,13 @@
     height: 300px;
     position: relative;
 
+    @include tablet() {
+      margin-top: 0;
+    }
+    @include phone() {
+      margin-top: 0;
+    }
+
     .hero-content {
       display: flex;
       width: 100%;
@@ -28,7 +35,6 @@
         background-size: cover;
         background-repeat: repeat;
         width: 100%;
-
       }
       .hero-text {
         color: #fff;
@@ -39,12 +45,12 @@
         position: absolute;
         width: 100%;
         text-align: center;
-        padding: 150px 20px 150px 20px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.41);
+        padding: 120px 20px 150px 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.41);
 
         @include phone() {
           font-size: 47.6px;
-          line-height: 65.45px;
+          line-height: 55.45px;
         }
       }
     }
@@ -64,7 +70,7 @@
     width: 80%;
     flex-grow: 1000;
     overflow-y: auto;
-    height: 100%
+    height: 100%;
   }
 
   @media only screen and (min-width: 768px) {
@@ -75,7 +81,6 @@
       box-shadow: unset;
     }
   }
-
 }
 div.error-state {
   display: flex;
@@ -87,7 +92,7 @@ div.error-state {
   justify-content: center;
   i {
     font-size: 6em;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
     &.bhi-caution {
       color: $negative;
     }

@@ -9,16 +9,12 @@
     "rtf",
     "odt"
   ],
-  "companyName": "TPD",
+  "companyName": "TPD:Mining",
   "companyLogoPath": "",
   "companyUrl": "",
   "careersUrl": "",
   "defaultLocale": "en-US",
-  "supportedLocales": [
-      "en-US",
-      "en-GB",
-      "fr-FR"
-  ],
+  "supportedLocales": ["en-US", "en-GB", "fr-FR"],
   "minUploadSize": 4096,
   "maxRelatedJobs": 5,
   "maxUploadSize": 5242880,
@@ -48,16 +44,11 @@
       }
     ],
     "showCategory": true,
-    "keywordSearchFields": [
-      "publicDescription",
-      "title"
-    ]
+    "keywordSearchFields": ["publicDescription", "title"]
   },
   "additionalJobCriteria": {
     "field": "customText6",
-    "values": [
-      "TPD Master Job Board"
-    ],
+    "values": ["Mining"],
     "sort": "-dateLastPublished"
   },
   "integrations": {
