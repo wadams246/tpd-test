@@ -22,7 +22,7 @@
     "batchSize": 500,
     "corpToken": "6Q3FKP",
     "port": null,
-    "swimlane": "99",
+    "swimlane": "42",
     "fields": [
       "id",
       "title",
