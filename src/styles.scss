@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~novo-elements/novo-elements";
-@import './index.scss';
-@import './mixins.scss';
+@import "./index.scss";
+@import "./mixins.scss";
 
 html {
   height: 100%;
@@ -11,17 +11,17 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: #FFF;
+  background-color: #fff;
   height: 100%;
 }
 
 app-job-list {
   novo-loading {
-  position: absolute;
-  top: 50%;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -30,17 +30,17 @@ novo-file-input {
 }
 
 app-job-list {
-  novo-list>div>novo-list-item   {
+  novo-list > div > novo-list-item {
     border-bottom: unset;
     background: #fff;
     padding: 12px 15px 6px 15px;
 
     div.list-item {
       display: block !important;
-      item-content i{
-       color: $primary-color !important;
+      item-content i {
+        color: $primary-color !important;
       }
-      >item-header item-title {
+      > item-header item-title {
         h6 {
           padding-bottom: 10px !important;
 
@@ -98,9 +98,9 @@ novo-search {
   }
 }
 
-app-job-details novo-card header{
+app-job-details novo-card header {
   padding: 10px 20px 10px 20px !important;
-  background-color: #BB5566;
+  background-color: #bb5566;
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -119,10 +119,10 @@ app-job-details novo-card header{
   }
 }
 
-.header{
-  >header {
+.header {
+  > header {
     h1 {
-      color: #D9DADC;
+      color: #d9dadc;
     }
   }
 }
@@ -142,16 +142,16 @@ app-sidebar {
     overflow-y: auto;
     overflow-x: hidden;
     &::-webkit-scrollbar {
-      background-color:#fff;
-      height:4px;
+      background-color: #fff;
+      height: 4px;
       width: 4px;
     }
     &::-webkit-scrollbar-track {
-      background-color:#fff
+      background-color: #fff;
     }
     &::-webkit-scrollbar-thumb {
-      background-color:#babac0;
-      border-radius:4px;
+      background-color: #babac0;
+      border-radius: 4px;
     }
     label {
       color: #616666 !important;
@@ -163,15 +163,15 @@ app-sidebar {
     div.checked label {
       color: $primary-color !important;
     }
-    & [class*='-group']:hover label i.bhi-checkbox-empty {
+    & [class*="-group"]:hover label i.bhi-checkbox-empty {
       color: $primary-color !important;
     }
 
-    [class*='-group']:hover span {
-      color: #18191A !important;
+    [class*="-group"]:hover span {
+      color: #18191a !important;
     }
 
-    [class*='-group']:hover label i:before {
+    [class*="-group"]:hover label i:before {
       box-shadow: none !important;
     }
   }
@@ -179,12 +179,13 @@ app-sidebar {
     background-color: white;
     border: none;
   }
-  input[type=text] {
+  input[type="text"] {
     border: 1px solid rgba(24, 25, 26, 0.2) !important;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-  novo-search.focused > button i, novo-search > button i {
+  novo-search.focused > button i,
+  novo-search > button i {
     color: #fff;
   }
   novo-search > input:focus {
@@ -193,19 +194,20 @@ app-sidebar {
 }
 
 app-main-page {
-  >novo-loading {
-  position: absolute;
-  top: 50%;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  > novo-loading {
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }
 
 app-apply-modal {
+  padding: 200px 0 20px;
   novo-form {
     form {
-      div.consent-form{
+      div.consent-form {
         display: flex;
         novo-control.checkbox {
           width: 50px;
@@ -244,7 +246,8 @@ novo-search {
   background: #515151 !important;
 }
 
-button[theme="secondary"], button[theme="primary"] {
+button[theme="secondary"],
+button[theme="primary"] {
   color: #ffffff !important;
   font-size: 14px !important;
   background: $primary-color !important;
@@ -257,14 +260,19 @@ button[theme="secondary"], button[theme="primary"] {
   font-family: $secondary-font;
   font-weight: 600 !important;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     box-shadow: none !important;
     background: #000 !important;
     border: 2px solid #000 !important;
   }
 }
 
-button[theme="secondary"], button[theme="dialogue"], button[theme="icon"], button[theme="standard"] {
+button[theme="secondary"],
+button[theme="dialogue"],
+button[theme="icon"],
+button[theme="standard"] {
   background: #fff !important;
   border: none !important;
   color: #5c6770 !important;
@@ -285,7 +293,7 @@ button[theme="secondary"], button[theme="dialogue"], button[theme="icon"], butto
     font-family: "Open Sans", sans-serif !important;
     font-size: 16px !important;
     line-height: 28px !important;
-    color: #18191A !important;
+    color: #18191a !important;
     padding: 0 !important;
 
     strong {
@@ -331,7 +339,7 @@ header[theme] > section {
   }
 }
 
-button[theme][theme='primary'][icon] i {
+button[theme][theme="primary"][icon] i {
   background: none !important;
 }
 
@@ -340,23 +348,24 @@ novo-file-input .file-input-group label.boxed,
   border: 2px dashed $primary-color !important;
 }
 
-novo-checkbox [class*='-group']:hover label i:before {
+novo-checkbox [class*="-group"]:hover label i:before {
   box-shadow: none;
 }
-novo-checkbox [class*='-group']:hover {
-  .bhi-checkbox-empty, .bhi-checkbox-filled {
-    color: $primary-color !important;
-  }
-}
-
-novo-checkbox [class*='-group'] {
+novo-checkbox [class*="-group"]:hover {
+  .bhi-checkbox-empty,
   .bhi-checkbox-filled {
     color: $primary-color !important;
   }
-
 }
 
-.consent-checkbox-label a, .link {
+novo-checkbox [class*="-group"] {
+  .bhi-checkbox-filled {
+    color: $primary-color !important;
+  }
+}
+
+.consent-checkbox-label a,
+.link {
   color: $primary-color !important;
 }
 

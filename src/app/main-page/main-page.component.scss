@@ -6,7 +6,7 @@
   flex-flow: column;
 
   @include tablet() {
-    margin-top: 133px;
+    margin-top: 0;
   }
 
   .hero-container {
@@ -29,9 +29,9 @@
       width: 100%;
 
       .hero-image {
-        background: url(../../assets/images/photo-1586161148512-64a1b3dac527.jpeg);
+        background: url(../../assets/images/TPD-job-board.jpeg);
         opacity: 0.6;
-        background-position: center;
+        background-position: center center;
         background-size: cover;
         background-repeat: repeat;
         width: 100%;

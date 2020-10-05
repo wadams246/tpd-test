@@ -4,15 +4,6 @@
   <span>{{ "ERROR_HAS_OCCURED" | translate }}</span>
 </div>
 <div class="frame" [ngStyle]="{ display: loading || error ? 'none' : 'flex' }">
-  <section class="hero-container">
-    <div class="hero-content">
-      <div class="hero-image"></div>
-      <p class="hero-text">
-        Your Next Opportunity Awaits! <br /><span>Mining Careers</span>
-      </p>
-    </div>
-  </section>
-
   <div style="display: flex">
     <app-sidebar
       (newFilter)="onSidebarFilter($event)"
